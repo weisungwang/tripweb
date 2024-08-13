@@ -1,0 +1,176 @@
+body {
+    margin: 0px;
+    background-color: #E4F9F5;
+}
+
+.nav {
+    height: 10vh;
+    padding: 0px 20px;
+    background-color: #11999E;
+    width: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.rightchevron {
+    background-color: #D9D9D9;
+    height: 10vh;
+    width: 250px;
+    display: inline-block;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+    .rightchevron > h1 {
+        display: inline-flex;
+        font-style: italic;
+        font-size: 40px;
+        position: absolute;
+        top: 2.5vh;
+        font-family: sans-serif;
+        margin: 0px;
+    }
+
+    .logo {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: bolder;
+        height: 75%;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+
+    .logo > img {
+        height: 80%;
+    }
+
+    .logo > p {
+        margin: 0px;
+    }
+
+    .login {
+        background-color: white;
+        height: 100%;
+        width: 9rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 15px;
+        border-radius: 25px;
+        border: 0px;
+    }
+
+    .login:hover {
+        box-shadow: 1px 1px 10px #30E3CA;
+    }
+
+    .login > p {
+        margin: 0px;
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    .login > img {
+        height: 80%;
+    }
+
+.trace {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 90px 250px auto;
+    gap: 15px;
+}
+
+.downlist {
+    border: solid;
+    border-width: 2px;
+    border-color: #30E3CA;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.lastday {
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    padding: 0;
+    border-color: transparent transparent #30E3CA transparent;
+}
+
+.nextday {
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    padding: 0;
+    border-color: #30E3CA transparent transparent transparent;
+}
+
+.oneday {
+    width: 250px;
+    border: solid;
+    border-width: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-color: #30E3CA;
+}
+
+.downlist-title {
+    border-bottom: 1px solid black;
+}
+
+
+.date {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 0px;
+}
+
+    .date > div {
+        height: 60px;
+        width: 60px;
+        background-color: aquamarine;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.place-list {
+    border padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.place-list-item {
+    width: 80%;
+}
+
+    .place-list-item > a {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        text-decoration-line: none;
+        color: black;
+        font-weight: bold;
+        text-decoration-color: black;
+    }
+
+     .place-list-item > a > img {
+        width: 2rem;
+        height: 2rem;
+        }
+
+.transform > div > * {
+    margin: 10px 0px;
+}

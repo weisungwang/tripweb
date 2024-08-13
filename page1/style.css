@@ -1,0 +1,80 @@
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  #slideshow {
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 300vw;
+    -webkit-animation: slide 18s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .slide:nth-child(1) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%E5%AE%89%E5%B9%B3%E5%8F%A4%E5%A0%A1%E4%B9%8B%E7%BE%8E.jpg/2560px-%E5%AE%89%E5%B9%B3%E5%8F%A4%E5%A0%A1%E4%B9%8B%E7%BE%8E.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+  
+  .slide:nth-child(2) {
+    background-image: url("https://art-gallery.tainan.gov.tw/upload/award/2022_E10.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+  
+  .slide:nth-child(3) {
+    background-image: url("https://live.staticflickr.com/4263/34368905803_98d2f3628c_o.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+  
+  .slide:nth-child(4) {
+    background: #D9D055;
+  }
+  
+  .slide-number {
+    color: #000;
+    text-align: center;
+    font-size: 10em;
+  }
+  
+  @-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -100vw;}
+    50% {margin-left: -100vw;}
+    70% {margin-left: -200vw;}
+    90% {margin-left: -200vw;}
+  }
+
+  #startPlanningButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    border-left: 2px;
+    border-right: 2px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.8); /* 白色背景，稍微透明 */
+    color: #00BCD4; /* 青色字體 */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    text-align: center;
+    position: absolute;
+    text-decoration: none;
+    top: 48%;
+    left: 45%;
+}
+  

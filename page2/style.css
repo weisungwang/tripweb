@@ -1,0 +1,201 @@
+body {
+    margin: 0px;
+}
+
+
+.nav {
+    background-color: #11999E;
+    height: 10vh;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav > div {
+    height: 75%;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bolder;
+    height: 75%;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.logo > img {
+    height: 80%;
+}
+
+.logo > p {
+    margin: 0px;
+}
+.login {
+    background-color: white;
+    height: 100%;
+    width: 9rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 25px;
+    border: 0px;
+}
+
+.login:hover {
+    box-shadow: 1px 1px 10px #30E3CA;
+}
+
+.login > p {
+    margin: 0px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.login > img {
+    height: 80%;
+}
+
+#active_list {
+    height: 15vh;
+    margin: 7vh 16.7vw 3vh 16.7vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#active_list > div > p {
+    font-weight: bold;
+    margin: 0px 0px 0px 10px;
+    font-size: 1.5rem;
+}
+
+#active_list > div > input, #active_list > div > select {
+    border: solid #11999E 2px;
+    padding: 0px;
+    border-radius: 15px;
+    color: rgba(64, 81, 78, 0.8);
+    height: 50%;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: inset 1px 2px 4px rgba(64, 81, 78, 0.5);
+}
+
+#date_input {
+    width: 50%;
+}
+
+#date_input > input {
+    width: 80%;
+}
+
+#trans_input {
+    width: 30%;
+}
+
+#trans_input > select{
+    width: 80%;
+}
+
+#active_list > button {
+    background-color: #30E3CA;
+    margin-top: 2rem;
+    border: 0px;
+    padding: 0px;
+    border-radius: 15px;
+    height: 50%;
+    width: 15%;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    box-shadow: 1px 2px 5px #40514E;
+}
+
+#want_to_go {
+    height: 7vh;
+    font-weight: bold;
+    font-size: 24pt;
+    padding-left: 15vw;
+}
+
+#want_to_go > p{
+    margin: 0px;
+}
+
+#city_selector {
+    height: 58vh;
+    margin: 0px 16.7vw 0px 16.7vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 3.5vh;
+    width: 30%;
+    height: 87%;
+}
+
+/* --------------------------------------------------白癡定位方式標記----------------------------------------------------------------- */
+/* 註: 不知道怎麼把東西蓋在圖片上，也不知道怎麼把它變圓的 */
+.front > * {
+    position: absolute;
+}
+
+.front > input {
+    height: 20px;
+    width: 20px;
+    top: 46.7vh;
+}
+
+#Tainan > .front > * {
+    left: 17.2vw;
+}
+
+#Kaohsiung > .front > * {
+    left: 40.5vw;
+}
+
+#Pingtung > .front > * {
+    left: 63.8vw;
+}
+
+.city_name{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 2rem;
+    top: 73vh;
+    color: white;
+    text-shadow: 2px 2px 5px black; 
+}
+
+/* --------------------------------------------------白癡定位方式結束標記----------------------------------------------------------------- */
+
+.card > .back {
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 2px 4px #40514E;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card > .back > img {
+    width: 100%;
+    height: 65%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.city_name{
+    font-weight: bold;
+
+}
+
+.little_word {
+    font-size: 10pt;
+    margin: 5px 0px 0px 5px;
+}

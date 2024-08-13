@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站名稱</title>
+
+    <style>
+        body {
+            margin: 0px;
+        }
+        .nav {
+            padding: 10px;
+            background-color: aquamarine;
+            width: auto;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav > a {
+            text-decoration-line: none;
+            color: black;
+            font-weight: bold;
+            text-decoration-color: black;
+        }
+
+        .teamname {
+            font-size: 1.5rem;
+        }
+
+        .log-in {
+            position: absolute;
+            right: 20px;
+            width: 3rem;
+            height: 2rem;
+            background-color: white;
+            color: aquamarine;
+            border: 0px;
+            border-radius: 5px;
+            font-weight: 900;
+        }
+
+        .trace {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 90px 250px 880px;
+            gap: 15px;
+        }
+
+        .trace > .map > div > img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .downlist {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+        .downlist-title{
+            border-bottom: 1px solid black;
+        }
+        .downlist-item {
+
+        }
+
+        .date {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0px;
+            border-bottom: 1px solid grey;
+        }
+
+        .date > div{
+            height: 60px;
+            width: 60px;
+            background-color: aquamarine;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .place-list {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .place-list-item{
+            width: 80%;
+        }
+ 
+        .place-list-item > a{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            text-decoration-line: none;
+            color: black;
+            font-weight: bold;
+            text-decoration-color: black;
+        }
+
+        .place-list-item > a > img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .transfrom {
+            width: 100%;
+            background-color: mintcream;
+        }
+
+        .transfrom > div {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .transfrom > div > *{
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="full-screen">
+        <div class="nav">
+            <a class="teamname" href="">團隊名稱</a>
+            <a href="">功能A</a>
+            <a href="">功能B</a>
+            <a href="">功能C</a>
+            <a href="">功能D</a>
+            <button class="log-in">登入</button>
+        </div>
+        <div class="trace">
+            <div class="downlist">
+                <div class="downlist-title">
+                    <h2>天數</h2>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D1</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D2</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D3</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D4</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D5</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D6</p>
+                    </div>
+                </div>
+                <div class="downlist-item date">
+                    <div>
+                        <p>D7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="downlist">
+                <div class="downlist-title">
+                    <h2>台南 到 高雄</h2>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+                <div class="downlist-item transfrom">
+                    <div>
+                        <img src="./caret-down-fill.svg" alt="">
+                        <p>10.5km</p>
+                    </div>
+                </div>
+                <div class="downlist-item place-list">
+                    <div class="place-list-item">
+                        <a href="#">
+                            <img src="./backpack2.svg" alt="a backpack">
+                            <p>景點</p>
+                            <img src="./trash-fill.svg" alt="delete">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div>
+                    <img src="./螢幕擷取畫面 2024-01-24 172508.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
