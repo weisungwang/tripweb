@@ -3,165 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網站名稱</title>
+    <title>初遊-行前規劃的最好幫手</title>
 
-    <style>
-        body {
-            margin: 0px;
-        }
-        .nav {
-            padding: 10px;
-            background-color: aquamarine;
-            width: auto;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .nav > a {
-            text-decoration-line: none;
-            color: black;
-            font-weight: bold;
-            text-decoration-color: black;
-        }
-
-        .teamname {
-            font-size: 1.5rem;
-        }
-
-        .log-in {
-            position: absolute;
-            right: 20px;
-            width: 3rem;
-            height: 2rem;
-            background-color: white;
-            color: aquamarine;
-            border: 0px;
-            border-radius: 5px;
-            font-weight: 900;
-        }
-
-        .trace {
-            margin: 10px;
-            display: grid;
-            grid-template-columns: 7vw 20vw 70vw;
-            gap: 15px;
-        }
-
-        .downlist {
-            background-color: whitesmoke;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 15px;
-        }
-
-        .downlist-title{
-            border-bottom: 1px solid black;
-        }
-
-        .date {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 20px 0px;
-            border-bottom: 1px solid grey;
-        }
-
-        .date > div{
-            height: 60px;
-            width: 60px;
-            background-color: aquamarine;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .place-list {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 80%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .place-list-item{
-            width: 80%;
-        }
- 
-        .place-list-item > a{
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            text-decoration-line: none;
-            color: black;
-            font-weight: bold;
-            text-decoration-color: black;
-        }
-
-        .place-list-item > a > img {
-            width: 2rem;
-            height: 2rem;
-        }
-
-        .transfrom {
-            width: 100%;
-            background-color: mintcream;
-        }
-
-        .transfrom > div {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .transfrom > div > *{
-            margin: 10px 0px;
-        }
-
-        #map {
-            height: 100%;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #floating-panel {
-            position: absolute;
-            top: 10px;
-            left: 25%;
-            z-index: 5;
-            background-color: #fff;
-            padding: 5px;
-            border: 1px solid #999;
-            text-align: center;
-            font-family: "Roboto", "sans-serif";
-            line-height: 30px;
-            padding-left: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <div class="full-screen">
         <div class="nav">
-            <a class="teamname" href="">團隊名稱</a>
-            <a href="">功能A</a>
-            <a href="">功能B</a>
-            <a href="">功能C</a>
-            <a href="">功能D</a>
-            <button class="log-in">登入</button>
+            <a href="../../" class="logo">
+                <img src="./backpack-fill.svg" alt="a white backpack">
+                <p>初遊</p>
+            </a>
+
+            <div class="progress">
+                <div class="rightchevron active"><h1>step1</h1></div>
+                <a href="../page4/page4.html"><div class="rightchevron"><h1>step2</h1></div></a>
+                <a href="../page5/page5.html"><div class="rightchevron"><h1>step3</h1></div></a>
+                <a href="../page6/page6.html"><div class="rightchevron"><h1>step4</h1></div></a>
+            </div>
+            <div style="height:75%">
+                <button class="login">
+                    <p>帳號登入</p>
+                    <img src="./person-circle.svg" alt="user mark">
+                </button>
+            </div>
         </div>
         <div class="trace">
             <div class="downlist">
                 <div class="downlist-title">
                     <h2>天數</h2>
+                </div>
+                <div>
+                    <button class="lastday"></button>
                 </div>
                 <div class="downlist-item date">
                     <div>
@@ -178,151 +51,109 @@
                         <p>D3</p>
                     </div>
                 </div>
-                <div class="downlist-item date">
-                    <div>
-                        <p>D4</p>
-                    </div>
-                </div>
-                <div class="downlist-item date">
-                    <div>
-                        <p>D5</p>
-                    </div>
-                </div>
-                <div class="downlist-item date">
-                    <div>
-                        <p>D6</p>
-                    </div>
-                </div>
-                <div class="downlist-item date">
-                    <div>
-                        <p>D7</p>
-                    </div>
+                <div>
+                    <button class = "nextday"></button>
                 </div>
             </div>
+
             <div class="downlist">
-                <div class="downlist-title">
+                <div class="downlist-title" style = "border:solid;border-right:0px;border-left:0px;border-top:0px;border-bottom-width:2px;border-color:#30E3CA;">
                     <h2>台南 到 高雄</h2>
                 </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
+                <div class = "oneday">
+                    <div class="downlist-item place-list">
+                        <div class="place-list-item">
+                            <a href="#">
+                                <img src="./backpack2.svg" alt="a backpack">
+                                <div>
+                                    <p class="spot-text"></p>
+                                </div>
+                                <img src="./trash-fill.svg" alt="delete">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="downlist-item transform">
+                        <div>
+                            <img src="./caret-down-fill.svg" alt="">
+                            <p>10.5km</p>
+                        </div>
                     </div>
                 </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
+                
+                <div class = "oneday">
+                    <div class="downlist-item place-list">
+                        <div class="place-list-item">
+                            <a href="#">
+                                <img src="./backpack2.svg" alt="a backpack">
+                                <div><p class="spot-text"></p></div>
+                                <img src="./trash-fill.svg" alt="delete">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="downlist-item transform">
+                        <div>
+                            <img src="./caret-down-fill.svg" alt="">
+                            <p>10.5km</p>
+                        </div>
                     </div>
                 </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
+
+                 <div class = "oneday">
+                    <div class="downlist-item place-list">
+                        <div class="place-list-item">
+                            <a href="#">
+                                <img src="./backpack2.svg" alt="a backpack">
+                                <div><p class="spot-text"></p></div>
+                                <img src="./trash-fill.svg" alt="delete">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="downlist-item transform">
+                        <div>
+                            <img src="./caret-down-fill.svg" alt="">
+                            <p>10.5km</p>
+                        </div>
                     </div>
                 </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
+
+                <div class = "oneday">
+                    <div class="downlist-item place-list">
+                        <div class="place-list-item">
+                            <a href="#">
+                                <img src="./backpack2.svg" alt="a backpack">
+                                <div><p class="spot-text"></p></div>
+                                <img src="./trash-fill.svg" alt="delete">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="downlist-item transform">
+                        <div>
+                            <img src="./caret-down-fill.svg" alt="">
+                            <p>10.5km</p>
+                        </div>
                     </div>
                 </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
-                    </div>
-                </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
-                    </div>
-                </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
-                    </div>
-                </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
-                    </div>
-                </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
-                    </div>
-                </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
-                    </div>
-                </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
-                    </div>
-                </div>
-                <div class="downlist-item transfrom">
-                    <div>
-                        <img src="./caret-down-fill.svg" alt="">
-                        <p>10.5km</p>
-                    </div>
-                </div>
-                <div class="downlist-item place-list">
-                    <div class="place-list-item">
-                        <a href="#">
-                            <img src="./backpack2.svg" alt="a backpack">
-                            <p>景點</p>
-                            <img src="./trash-fill.svg" alt="delete">
-                        </a>
+
+                <div class = "oneday">
+                    <div class="downlist-item place-list">
+                        <div class="place-list-item">
+                            <a href="#">
+                                <img src="./backpack2.svg" alt="a backpack">
+                                <div><p class="spot-text"></p></div>
+                                <img src="./trash-fill.svg" alt="delete">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div>
-                <div id="floating-panel">
-                    <b>Coordinate (Latitude, Longitude):</b><br>
-                    <input id="coordinate" type="text" placeholder="Enter coordinates">
-                    <br>
-                    <button onclick="addCoordinate()">Add Coordinate</button>
-                    <select id="mode" onchange="calcRoute();">
-                        <option value="DRIVING">Driving</option>
-                        <option value="TRANSIT">Transit</option>
-                    </select>
-                    <button onclick="calcRoute()">Calculate Route</button>
-                    <br>
-                    <b>Coordinates:</b>
-                    <ul id="coordinate-list"></ul>
+                <div>
+                    <div class="map" id="map" style="height: 85vh;"></div>
                 </div>
-                <div id="map"></div>
             </div>
         </div>
     </div>
-
     <script>
         //導入Google Map API
         (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
