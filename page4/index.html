@@ -149,6 +149,20 @@
             
             <div>
                 <div>
+                    <div id="floating-panel">
+                        <b>Coordinate (Latitude, Longitude):</b><br>
+                        <input id="coordinate" type="text" placeholder="Enter coordinates">
+                        <br>
+                        <button onclick="addCoordinate()">Add Coordinate</button>
+                        <select id="mode" onchange="calcRoute();">
+                            <option value="DRIVING">Driving</option>
+                            <option value="TRANSIT">Transit</option>
+                        </select>
+                        <button onclick="calcRoute()">Calculate Route</button>
+                        <br>
+                        <b>Coordinates:</b>
+                        <ul id="coordinate-list"></ul>
+                    </div>
                     <div class="map" id="map" style="height: 85vh;"></div>
                 </div>
             </div>
