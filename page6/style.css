@@ -1,0 +1,208 @@
+body {
+    margin: 0px;
+    background-color: #EDE7E3;
+}
+
+.nav {
+    height: 10vh;
+    padding: 0px 20px;
+    background-color: #11999E;
+    width: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.progress {
+    height: 5.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+
+.rightchevron {
+    height: 5.2vh;
+    width: 24vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: relative;
+    margin: 0px;
+    background-color: #a2a2a2;
+}
+
+
+
+.rightchevron.active {
+    background-color: #16697A;
+}
+
+
+
+.rightchevron h1:hover {
+    /* transform: scale(1.05); */
+    transform: scale(1.1);
+}
+
+
+
+.rightchevron h1 {
+    display: inline-flex;
+    font-style: italic;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 0;
+    color: #000;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.rightchevron.active h1{
+    color:white;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bolder;
+    height: 75%;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.logo > img {
+    height: 80%;
+}
+
+.logo > p {
+    margin: 0px;
+}
+
+.login {
+    background-color: white;
+    height: 100%;
+    width: 9rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px;
+    border: 0px;
+}
+
+.login:hover {
+    box-shadow: 1px 1px 10px #30E3CA;
+}
+
+.login > p {
+    margin: 0px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.login > img {
+    height: 80%;
+}
+
+.trace {
+    display: flex;
+    width: 100vw;
+    height: 84vh;
+    background-color:#EDE7E3;
+    gap: 1%;
+}
+
+.downlist {
+    flex-basis: 8%;
+}
+
+/* 大機率會拿掉 */
+.lastday {
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    padding: 0;
+    border-color: transparent transparent #30E3CA transparent;
+}
+
+.nextday {
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    padding: 0;
+    border-color: #30E3CA transparent transparent transparent;
+}
+
+.perDayInfor {
+    flex-basis: 67%;
+    padding: 15px 40px;
+    /* background-color: #53575a; */
+    background-color: #a9a9a9
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+
+th{
+    background-color: whitesmoke;
+    color: gray;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 10rem;
+}
+
+td > ul > li{
+    list-style-type: decimal;
+}
+
+.righttool {
+    flex-basis: 24%;
+    display: flex;
+    padding: 20px 0px 50px 20px;
+    align-items: center;
+}
+
+.output > button{
+    width: 80%;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: xx-large;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.store, .share {
+    background-color: #828282;
+}
+
+#downloadPdfBtn{
+    background-color: orange;
+}
+

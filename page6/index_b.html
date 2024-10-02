@@ -5,211 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        body {
-            margin: 0px;
-        }
 
-        .head {
-            display: flex;
-            height: 20vh;
-            background-image: url("https://static.wixstatic.com/media/162a3a_5efcd36d57144be6b50251d3f94c5ced~mv2_d_5182_3455_s_4_2.jpg/v1/fit/w_2500,h_1330,al_c/162a3a_5efcd36d57144be6b50251d3f94c5ced~mv2_d_5182_3455_s_4_2.jpg");
-        }
-
-        .head > p {
-            font-size: xx-large;
-            margin-left: 15%;
-            color: aliceblue;
-            font-weight: 900;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-
-        .main {
-            display: flex;
-            width: 100vw;
-            height: 80vh;
-            background-color:white;
-            gap: 1%;
-        }
-
-        .lefttool {
-            flex-basis: 9%;
-        }
-
-        .daychoose {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .uptriangle {
-            border: none;
-            width: 60px;
-            height: 20px;
-            background-color: aquamarine;
-            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-        }
-
-        .downtriangle {
-            border: none;
-            width: 60px;
-            height: 20px;
-            background-color: aquamarine;
-            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-        }
-
-        .daytitle {
-            align-self: flex-start;
-            width: 120px;
-            
-        }
-
-        .daytitle > h2{
-            background-color:white;
-            color:aquamarine;
-            font-weight: 600;
-            text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-
-        .daylist {
-            gap: 15px;
-            padding: 0px 10px 0px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            list-style-type: none;
-        }
-
-        .dayitem {
-            background-color: aquamarine;
-            height: 60px;
-            width: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-
-        .daylink {
-            text-decoration: none;
-        }
-
-        .perDayInfor {
-            flex-basis: 80%;
-            padding: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border-top-left-radius: 5rem;
-            border-top-right-radius: 5rem;
-        }
-
-        th{
-            background-color: whitesmoke;
-            color: gray;
-            padding: 8px;
-            text-align: center;
-        }
-        
-        td {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            height: 10rem;
-        }
-
-        td > ul > li{
-            list-style-type: decimal;
-        } 
-
-        .righttool {
-            flex-basis: 9%;
-            display: flex;
-            padding: 20px 0px 50px 20px;
-            align-items: flex-end;
-        }
-
-        .output > button{
-            width: 100%;
-            border: none;
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 10px 0px 0px 10px;
-            color: white;
-            font-size: large;
-            font-weight: 700;
-            text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-
-        .store {
-            background-color: orange;
-        }
-
-        #downloadPdfBtn{
-            background-color: aquamarine;
-        }
-    </style>
     <!-- 引入 html2pdf.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-    <div class="head">
-        <p>user 的行程</p>
-    </div>
-    <div class="main">
-        <div class="lefttool">
-            <section class="daychoose">
-                <header class="daytitle">
-                    <h2>日期</h2>
-                </header>
-                <button class="uptriangle"></button>
-                <ul class="daylist">
-                    <li class="dayitem">
-                        <a class="daylink" href="">D1</a>
-                    </li>
-                    <li class="dayitem">
-                        <a class="daylink" href="">D2</a>
-                    </li>
-                    <li class="dayitem">
-                        <a class="daylink" href="">D3</a>
-                    </li>
-                    <li class="dayitem">
-                        <a class="daylink" href="">D4</a>
-                    </li>
-                    <li class="dayitem">
-                        <a class="daylink" href="">D5</a>
-                    </li>
-                </ul>
-                <button class="downtriangle"></button>
-            </section>
+    <div class="full-screen">
+        <div class="nav">
+            <a href="../../" class="logo">
+                <img src="./backpack-fill.svg" alt="a white backpack">
+                <p>初遊</p>
+            </a>
+
+            
+            <div style="height:75%">
+                <button class="login">
+                    <p>帳號登入</p>
+                    <img src="./person-circle.svg" alt="user mark">
+                </button>
+            </div>
         </div>
-        <div class="perDayInfor" id="element-to-print">
-            <table>
-                <thead>
-                    <tr id="dTitle">
-                        <th style="width: 5%; border-top-left-radius: 2rem;"></th>
-                        <th style="width: 15%;">日期</th>
-                        <th style="width: 15%;">城市</th>
-                        <th style="width: 15%;">交通</th>
-                        <th style="width: 35%;">景點</th>
-                        <th style="width: 15%; border-top-right-radius: 2rem;">住宿</th>
-                    </tr>
-                </thead>
-                <tbody id="tripTable">
-                    <!-- 動態生成的表格內容 -->
-                </tbody>
-            </table>
+        <div class="progress">
+            <a href="../page3/page3.html"><div class="rightchevron"><h1>step1</h1></div></a>
+            <a href="../page4/page4.html"><div class="rightchevron"><h1>step2</h1></div></a>
+            <a href="../page5/page5.html"><div class="rightchevron"><h1>step3</h1></div></a>
+            <div class="rightchevron active"><h1>step4</h1></div>
         </div>
-        <div class="righttool">
-            <div class="output">
-                <button class="store">儲存行程</button>
-                <button id="downloadPdfBtn">匯出成PDF</button>
+        <div class="trace" >
+
+            <div class="downlist" id="bottonContainer">
+                <div class="downlist-title">
+                    <h2>天數</h2>
+                </div>
+                <div>
+                    <button class="lastday"></button>
+                </div>
+                <div>
+                    <button class = "nextday"></button>
+                </div>
+            </div>
+            <div class="perDayInfor">
+                <table id="element-to-print">
+                    <thead>
+                        <tr id="dTitle">
+                            <th style="width: 5%; border-top-left-radius: 2rem;"></th>
+                            <th style="width: 15%;">日期</th>
+                            <th style="width: 15%;">城市</th>
+                            <th style="width: 15%;">交通</th>
+                            <th style="width: 35%;">景點</th>
+                            <th style="width: 15%; border-top-right-radius: 2rem;">住宿</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tripTable">
+                        <!-- 動態生成的表格內容 -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="righttool">
+                <div class="output">
+                    <button class="store">儲存行程</button>
+                    <button id="downloadPdfBtn">下載檔案</button>
+                    <!-- <button id="downloadPdfBtn">匯出成PDF</button> -->
+                    <button class="share">分享</button>
+                </div>
             </div>
         </div>
     </div>
