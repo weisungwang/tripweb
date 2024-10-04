@@ -67,6 +67,22 @@ body {
     transform: translate(-50%, -50%); */
 }
 
+#R1{
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+
+#R2{
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
+}
+
+#R3{
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
+}
+
+#R4{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 5% 50%);
+}
+
 .rightchevron.active h1{
     color:white;
 }
